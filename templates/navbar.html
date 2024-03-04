@@ -1,0 +1,41 @@
+<nav class="navbar bg-light sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">
+      <img src="static/noun-las-vegas-3583799.svg" alt="Las Vegas by Blaise Sewell from NounProject.com" width="100" height="50">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Main Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url_for('orderMake') }}">Get passes</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="offcanvasNavbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ORDS resources
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="offcanvasNavbarDropdown">
+              <li><a class="dropdown-item" href="https://www.oracle.com/database/technologies/appdev/rest.html">About ORDS</a></li>
+              <li><a class="dropdown-item" href="https://www.oracle.com/database/technologies/appdev/rest/best-practices/">ORDS Best Practices</a></li>
+              <li><a class="dropdown-item" href="https://community.oracle.com/tech/developers/categories/oracle_rest_data_services">ORDS Forum</a></li>
+              <li><a class="dropdown-item" href="https://docs.oracle.com/en/database/oracle/oracle-rest-data-services/">ORDS Documentation</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="https://www.oracle.com/database/sqldeveloper/technologies/db-actions/download/">Download ORDS</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

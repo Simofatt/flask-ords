@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+    <!-- Section 1 on of the home/landing/index page -->
+    <!-- Most (think 90%) of what you see here is borrowed from Bootstrap. Much of the CSS is handled via the "base.html" page. If you look back, we are referring to Bootstraps HTML and CSS APIs. -->
+    <div class="row">
+        <div class="col">
+            <div class="p-3">
+                <div class="card text-bg-light mb-3 card border-light text-center">
+                    <!-- <img src="..." class="card-img-top" alt="..."> -->
+                    <!-- <div class="card-header">Header</div> -->
+                    <div class="card-body">
+                        <h1 class="display-4">Lorem ipsum...</h1>
+                      <p class="card-text"><i>...dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua...</i></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section 2 of the home/landing/index page -->
+    <div class="row">
+        <div class="col">
+            <div class="p-3">
+                <div class="card mb-3 card text-bg-light card border-light">
+                    <div class="row g-0">
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">So many options...</h5>
+                            <p class="card-text">You've made it this far, let us take it from here. With so many things to do, Las Vegas can be a little overwhelming. But did you know, there is tons of stuff to do off the main strip too! Check out the map below for details on the best attractions Las Vegas has to offer.
+                            <p>And when you’re ready we have Day passes for person.</p>
+                                </p>
+                            <a href="/orderform" class="btn btn-outline-primary">Purchase Day Passes!</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <img src="static/lasvegascardimage.jpg" class="img-fluid rounded-start" class alt="...">
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section 3 of the home/landing/index page -->
+    <div class="row">
+        <div class="col">
+            <div class="p-3">
+                <div class="card text-bg-light mb-3 card border-light">
+                    <div class="card-body">
+                        <h5 class="card-title">Explore</h5>
+                             <p class="card-text">Click the Tool-tips to learn more!</p>
+                             {{ lvmap | safe }}
+                             <p></p> 
+                      <a href="#" class="btn btn-primary">Back to top</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- OPTIONAL CHALLENGE - using this HTML, along with the /campaigns/newsletter Oracle REST endpoint, can you create a route and function that will allow a user to input their information into fields that will then be sent as a JSON payload to a "Campaigns" table in your Autonomous Database?  
+    <div class="row">
+        <div class="col-6">
+            <div class="p-3">
+                <div class="card text-bg-light mb-3 card border-light">
+                    <div class="card-body">
+                        <h5 class="card-title">Stay in the know</h5>
+                        <div class="mb-3">
+                            <div class="card-text text-muted" >Get exclusive access to special venues, last minute deals, and VIP discounts.  
+                            </div>
+                        </div>
+                            <form>
+                                <div class="input-group">
+                                    <span class="input-group-text">First and last name</span>
+                                    <input type="text" aria-label="First name" class="form-control">
+                                    <input type="text" aria-label="Last name" class="form-control">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+    </div>
+</div>
+
+{% endblock %} 

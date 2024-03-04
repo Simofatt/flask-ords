@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid">
+  <div class="row py-4">
+    <div class="col">
+      <table class="table table-borderless table-hover" id="">
+        <thead>
+          <tr>
+            <th scope="col">Order ID</th>
+            <th scope="col">Item Name</th>
+            <th scope="col">Quantity Ordered</th>
+            <th scope="col">Purchase Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for i in list_of_orders_from_request %}
+          <tr>
+            <th scope="row">{{ i["order_id"] }}</th>
+            <td>{{ i["product_name"] }}</td>
+            <td>{{ i["quantity"] }}</td>
+            <td>{{ i["total_price"] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row py-4">
+    <div class="col-2">
+      <a button type="submit" href="{{ url_for('index') }}" class="btn btn-primary">Home</a>
+    </div>
+</div>
+{% endblock %}

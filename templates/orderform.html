@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %} 
+<div class="container-fluid">
+    <p></p>
+<h1 class="display-4 ">Order Passes</h1>
+<p></p>
+    <div class="row mx-2">
+        <div class="form">
+            <form action="/result" method="POST">
+            <!-- First row, will contain two columns: Day Pass option menu and Description -->
+            <div class="row gx-5">
+                <!-- Column #1 is for Day Pass Option -->
+                <div class="col-4">
+                    <div class="row py-3">
+                        <h5>Choose an option:</h5>
+                        <!-- Here you see our first two Javascript functions: 'getPrice();" and "getDescription();". Recall these were first introduced in the "base.html" file.-->
+                        <select name="product_id" id="product_id" method="GET" action="/" onchange="getPrice(); getDescription();">
+                            <option value="" selected>Choose from the dropdown list</option>
+                            {% for i in list_of_products_from_request %}
+                            <option value="{{ i['product_id'] }}">{{ i["product_name"] }}</option>
+                            {% endfor %}
+                            </select>
+                    </div>
+                    <div class="row py-3">
+                        <h5>Passes needed:</h5>
+                            <!-- Our third JavaScript function, "totalPrice();". Here we calculate the total price of the order by multiplying the unit price by the quantity. -->
+                            <input type="number" id="quantity" name="quantity"
+                            min="0" max="20" value="" onchange="totalPrice();">
+                    </div>
+                    <div class="row py-5">
+                            <button type="submit" class="btn btn-primary">Complete my purchase</button>
+                        </div>    
+                </div>
+                <!-- Column # 2 would be for the product description -->
+                <div class="col-4">
+                    <div class="row py-3">
+                        <div class="card text-bg-dark">
+                            <div class="card-body">
+                                <h5 class="card-title">Description:</h5>
+                                <p></p>
+                                <p class="card-text"><i><span id="product_description"></span></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item list-group-item-light" value="">Price per: $ <span id="product_price" type="number"></span></li>
+                                <li class="list-group-item list-group-item-primary">Total Price: $ <input type="text" id="total_price" name="total_price" inputmode="numeric" style="border:none; background-color:transparent; color:#084298;" readonly></li>
+                              </ul>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+{% endblock %} 
