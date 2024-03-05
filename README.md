@@ -27,17 +27,17 @@ This folder consists of four main parts:
 
 4. **Flask**: Flask is a lightweight web framework for Python. It provides tools, libraries, and utilities for building web applications. You can install Flask using pip, the Python package manager, within your virtual environment. Run the following command:
     ```bash
-    python -m pip install Flask
+    python3 -m pip install Flask
     ```
 
 5. **Requests**: Requests is a Python library used for making HTTP requests. It simplifies the process of sending HTTP requests and processing responses. You can install Requests using pip within your virtual environment. Run the following command:
     ```bash
-    python -m pip install requests
+    python3 -m pip install requests
     ```
 
 6. **Folium**: Folium is a Python library for creating interactive maps. It is based on the Leaflet.js library. You can install Folium using pip within your virtual environment. Run the following command:
     ```bash
-    python -m pip install folium
+    python3 -m pip install folium
     ```
 
 
