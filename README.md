@@ -36,3 +36,13 @@ The Python application. This contains extensive commenting. The Python file and 
 This Workshop is structured around a Resource Module which consists of several Resource Templates and Resource Handlers. 
 
 You may be familiar with Postman or the OpenAPI's Swagger editor. If you like, you can use either to test and explore the base ORDS URI: https://yfuxkbz2ls7taze-ordshandsonlabs.adb.us-phoenix-1.oraclecloudapps.com/ords/python/open-api-catalog/flask/
+
+### BEST TO KNOW 
+
+URL OF THE DOCUMENTATION : https://apexapps.oracle.com/pls/apex/r/dbpm/livelabs/run-workshop?session=116589809390275 
+Jinja                    : is a web template engine for the Python programming language. Special placeholders in the template allow writing code similar to Python syntax.
+	
+
+	{% ... %} - used for statements
+	{{ ... }} - used for expressions
+	{# ... #} - used for comments		 
