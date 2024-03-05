@@ -17,7 +17,7 @@ import json
 
 app = Flask(__name__)
 
-# "Tiles" are the term for how a map will look when it is rendered. The default is OpenStreetMap, but here we are selecting Stamen Toner. There are many others, but refer to the documentation for more details: http://python-visualization.github.io/folium/quickstart.html#Getting-Started 
+# "Tiles" are the term for how a map will look when it is rendered. The default is OpenStreetMap There are many others, but refer to the documentation for more details: http://python-visualization.github.io/folium/quickstart.html#Getting-Started 
 m = folium.Map(location=[36.085645468598855, -115.08441257156686], zoom_start=10, min_zoom=10, tiles="OpenStreetMap")
 
 
