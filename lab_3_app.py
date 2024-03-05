@@ -23,7 +23,7 @@ m = folium.Map(location=[36.085645468598855, -115.08441257156686], zoom_start=10
 
 tooltip = "Click me!"
 
-response = requests.get("[ORDS URI here]").json()
+response = requests.get("https://yfuxkbz2ls7taze-ordshandsonlabs.adb.us-phoenix-1.oraclecloudapps.com/ords/python/flask/museums/").json()
 
 # Initially we loaded these coordinates as NUMBER in our table. However, what we didn't realize was that "NUMBER" uses (5,2) as the default Precision and Scale.This led to all the coordinates being rounded to the same latitude and longitude. For instance, if we look at these to locations:
 # - Honor Society Museum is at 36.14556332104072, -115.26720938719485
@@ -48,7 +48,7 @@ for museums in response['items']:
         tooltip=tooltip
         ).add_to(m)
  
-lvmap = m._repr_html_()
+lvmap = m._repr_html_()   #We include this to temporarily save our map as an HTML iframe (this consists of all necessary HTML and JavaScript properties).
 
 # Here you will see all the application routes and any associated .html pages they direct to. 
 
@@ -60,7 +60,7 @@ def index():
 @app.route('/get_price')
 def getPrice():
     a = request.args.get('a')
-    url = "[ORDS URI here]"+a
+    url = "https://yfuxkbz2ls7taze-ordshandsonlabs.adb.us-phoenix-1.oraclecloudapps.com/ords/python/flask/products/pricing/"+a
     # print(url)
     response = requests.get(url)
 
@@ -78,7 +78,7 @@ def getPrice():
 @app.route('/get_description')
 def getDescription():
     a = request.args.get('a')
-    url = "[ORDS URI here]"+a
+    url = "https://yfuxkbz2ls7taze-ordshandsonlabs.adb.us-phoenix-1.oraclecloudapps.com/ords/python/flask/products/descriptions/"+a
 
     response = requests.get(url)
 
@@ -96,7 +96,7 @@ def getDescription():
 @app.route('/orderform') 
 def orderMake():
     def getProducts():    
-        response = requests.get("[ORDS URI here]")
+        response = requests.get("https://yfuxkbz2ls7taze-ordshandsonlabs.adb.us-phoenix-1.oraclecloudapps.com/ords/python/flask/products/")
         list_of_products = []
 
         for products in response.json()['items']:
@@ -122,7 +122,7 @@ def orderMake():
 @app.route('/orderhistory')
 def orderHistory():
     def getOrders():
-        response = requests.get("[ORDS URI here]")
+        response = requests.get("https://yfuxkbz2ls7taze-ordshandsonlabs.adb.us-phoenix-1. oraclecloudapps.com/ords/python/flask/orders/")
         list_of_orders = []
 
         for orders in response.json()['items']:
@@ -154,7 +154,7 @@ def orderHistory():
 
 @app.route('/result', methods = ['POST', 'GET'])    
 def result():
-   url = "[ORDS URI here]"
+   url = "https://yfuxkbz2ls7taze-ordshandsonlabs.adb.us-phoenix-1.oraclecloudapps.com/ords/python/flask/orders/"
    if request.method == 'POST':
         product_id = request.form.get('product_id')
         quantity = request.form.get('quantity')
