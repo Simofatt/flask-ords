@@ -143,7 +143,7 @@ def orderHistory():
                 ordersList['total_price'] = total_price
 
                 list_of_orders.append(ordersList)
-
+                
             except:
                 pass
 
