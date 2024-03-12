@@ -1,7 +1,7 @@
 ## Welcome
 
 ### About
-Develop Python Web Apps with Oracle Autonomous Database REST APIs using Oracle Rest Data Services (ORDS). The Database was created in Oracle cloud Infrastruture.
+Python Web Application, using Oracle Rest Data Services (ORDS). The Database is an Oracle Autonomous Database that was created in Oracle cloud Infrastruture.
 
 ### Folder Contents
 This folder consists of four main parts:
